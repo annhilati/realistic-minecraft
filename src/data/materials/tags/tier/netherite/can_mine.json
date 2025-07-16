@@ -1,0 +1,11 @@
+{
+    "values": [
+        "materials:tier/wood/can_mine",
+        "materials:tier/stone/can_mine",
+        "materials:tier/copper/can_mine",
+        "materials:tier/gold/can_mine",
+        "materials:tier/iron/can_mine",
+        "materials:tier/diamond/can_mine",
+        "materials:tier/netherite/unlocks"
+    ]
+}

@@ -1,0 +1,8 @@
+{
+    "values": [
+        "materials:tier/wood/can_mine",
+        "materials:tier/stone/can_mine",
+        "materials:tier/gold/can_mine",
+        "materials:tier/copper/unlocks"
+    ]
+}

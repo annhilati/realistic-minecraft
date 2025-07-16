@@ -2,15 +2,28 @@ name:
   translate: minecraft.item.iron_pickaxe
 model: minecraft:iron_pickaxe
 components:
-  - tool:
+  tool:
     # On multiple overriding matches: First is chosen
     - blocks: "#materials:tier/iron/cannot_mine"
       correct_for_drops": false
     - blocks: "#minecraft:mineable/pickaxe"
       correct_for_drops": true
-      speed: 8.0
+      speed: 6.0
 
 
 behavior:
-  - 
+  - damagable:
+      durability: 250
+      #repair_materials: ["minecraft:iron_tool_materials"]
+  - weapon:
+      attack_damage: 4
+      attack_speed: 1.2
+      can_sweep: false
+      item_damage_per_attack: 2
+  - enchantable:
+      enchantability: 14
+      enchantable_tag: "minecraft:pickaxes"
+  - rarity:
+      rarity: common
 type: CustomItem
+id: minecraft:iron_pickaxe

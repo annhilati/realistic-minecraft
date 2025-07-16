@@ -4,7 +4,13 @@
         "**/.svn": true,
         "**/.hg": true,
         "**/.DS_Store": true,
-        "**/Thumbs.db": true
+        "**/Thumbs.db": true,
+        "__pycache__": true,
+        ".beet_cache": true
     },
-    "hide-files.files": []
+    "hide-files.files": [
+        "__pycache__",
+        ".beet_cache",
+        ".vscode"
+    ]
 }

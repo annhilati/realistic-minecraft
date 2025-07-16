@@ -1,6 +1,7 @@
-resource-pack:
+resource_pack:
   load:
     - src
+output: .
 require:
   - beetsmith.requirements
 pipeline:
