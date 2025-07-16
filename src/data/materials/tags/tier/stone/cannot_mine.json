@@ -1,0 +1,9 @@
+{
+    "values": [
+        "materials:tier/copper/unlocks",
+        "materials:tier/gold/unlocks",
+        "materials:tier/iron/unlocks",
+        "materials:tier/diamond/unlocks",
+        "materials:tier/netherite/unlocks"
+    ]
+}

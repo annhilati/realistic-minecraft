@@ -1,0 +1,16 @@
+name:
+  translate: minecraft.item.iron_pickaxe
+model: minecraft:iron_pickaxe
+components:
+  - tool:
+    # On multiple overriding matches: First is chosen
+    - blocks: "#materials:tier/iron/cannot_mine"
+      correct_for_drops": false
+    - blocks: "#minecraft:mineable/pickaxe"
+      correct_for_drops": true
+      speed: 8.0
+
+
+behavior:
+  - 
+type: CustomItem

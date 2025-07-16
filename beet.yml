@@ -1,0 +1,7 @@
+resource-pack:
+  load:
+    - src
+require:
+  - beetsmith.requirements
+pipeline:
+  - plugin.main
