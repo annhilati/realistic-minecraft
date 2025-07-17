@@ -6,7 +6,8 @@
         "**/.DS_Store": true,
         "**/Thumbs.db": true,
         "__pycache__": true,
-        ".beet_cache": true
+        ".beet_cache": true,
+        ".vscode": true
     },
     "hide-files.files": [
         "__pycache__",

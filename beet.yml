@@ -4,5 +4,7 @@ resource_pack:
 output: .
 require:
   - beetsmith.requirements
+  - plugin.tag_building_requirements
 pipeline:
-  - plugin.main
+  # - plugin.main
+  - plugin.build_tags

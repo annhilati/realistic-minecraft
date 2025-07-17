@@ -1,7 +1,5 @@
 {
     "values": [
-        "minecraft:nether_quartz_ore",
-
         "minecraft:quartz_block",
         "minecraft:quartz_bricks",
         "minecraft:quartz_pillar",
@@ -10,9 +8,6 @@
         "minecraft:smooth_quartz_block",
         "minecraft:smooth_quartz_slab",
         "minecraft:smooth_quartz_stairs",
-        "minecraft:chiseled_quartz_block",
-
-        "minecraft:amethyst_block",
-        "minecraft:budding_amethyst"
+        "minecraft:chiseled_quartz_block"
     ]
 }
