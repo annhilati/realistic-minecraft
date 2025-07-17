@@ -1,4 +1,4 @@
-resource_pack:
+data_pack:
   load:
     - src
 output: .

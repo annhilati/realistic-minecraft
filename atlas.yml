@@ -5,7 +5,9 @@
 stone:
     1.5: 
         - "#materials:variants/clean_stone_blocks": 3
-        - "minecraft:amethyst_block": 5
-        - "#materials:variants/quartz_blocks": 2
     2:
         - "#materials:variants/cobblestone_blocks": 2
+diamond:
+    1.5:
+        - "#materials:variants/quartz_blocks": 2
+        - "minecraft:amethyst_block": 5
