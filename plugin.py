@@ -6,9 +6,8 @@ from typing import ClassVar
 
 def main(ctx: Context):
     items = [
-        (Path("src/data/minecraft/beetsmith/iron_pickaxe.yml"), "minecraft:iron_pickaxe")
+        (Path("src/items/iron_pickaxe.yml"), "minecraft:iron_pickaxe")
     ]
-    
     
     for item in items:
         instance = load_from_file(item[0])
@@ -23,7 +22,7 @@ def tag_building_requirements(ctx: Context) -> Plugin:
     ctx.data.extend_namespace.append(Tag)
 
 def build_tags(ctx: Context):
-    with open("atlas.yml", "r") as f:
+    with open("src/atlas.yml", "r") as f:
         data: dict[str, dict[float, list[dict]]] = yaml.safe_load(f)
 
     print(data)
