@@ -1,9 +1,13 @@
+# {tier}: # refers to a tag 'materials:tier/{tier}/unlocks'
+#     {hardcoded hardness}:
+#       - "{block or tag}": {custom hardness}
+
 wood:
 stone:
     1.5: 
       - "#materials:variants/clean_stone_blocks": 3
+       - "minecraft:amethyst_block": 5
     2:
       - "#materials:variants/cobblestone_blocks": 2
     1.5:
       - "#materials:variants/quartz_blocks": 2
-      - "minecraft:amethyst_block": 1.58
