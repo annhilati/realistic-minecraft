@@ -1,4 +1,6 @@
 wood:
 stone:
-  - "#materials:group/stone_blocks": [1.5, 3]
-  - "#materials:group/cobblestone_blocks": [2, 2]
+    1.5: 
+      - "#materials:group/stone_blocks": 3
+    2:
+      - "#materials:group/cobblestone_blocks": 2
