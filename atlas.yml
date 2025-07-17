@@ -1,6 +1,6 @@
 wood:
 stone:
     1.5: 
-      - "#materials:group/clean_stone_blocks": 3
+      - "#materials:variants/clean_stone_blocks": 3
     2:
-      - "#materials:group/cobblestone_blocks": 2
+      - "#materials:variants/cobblestone_blocks": 2
