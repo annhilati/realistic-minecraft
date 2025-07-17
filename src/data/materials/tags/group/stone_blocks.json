@@ -1,33 +1,8 @@
 {
     "values": [
-        "minecraft:stone",
-        "minecraft:stone_slab",
-        "minecraft:stone_stairs",
-
-        "minecraft:stone_bricks",
-        "minecraft:stone_brick_stairs",
-        "minecraft:stone_brick_slab",
-        "minecraft:stone_brick_wall",
-        "minecraft:chiseled_stone_bricks",
-        "minecraft:cracked_stone_bricks",
-        
-        "minecraft:mossy_stone_bricks",
-        "minecraft:mossy_stone_brick_slab",
-        "minecraft:mossy_stone_brick_stairs",
-        "minecraft:mossy_stone_brick_wall",
-        
-        "minecraft:smooth_stone",
-        "minecraft:smooth_stone_slab",
-        
-        "minecraft:cobblestone",
-        "minecraft:cobblestone_slab",
-        "minecraft:cobblestone_stairs",
-        "minecraft:cobblestone_wall",
-
-        "minecraft:mossy_cobblestone",
-        "minecraft:mossy_cobblestone_slab",
-        "minecraft:mossy_cobblestone_stairs",
-        "minecraft:mossy_cobblestone_wall",
+        "#materials:group/hardness_group/clean_stone_blocks_1_5",
+        "#materials:group/hardness_group/clean_stone_blocks_2",
+        "#materials:group/hardness_group/cobblestone_blocks",
         
         "minecraft:stone_button",
         "minecraft:stone_pressure_plate",

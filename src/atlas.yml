@@ -1,13 +1,26 @@
 # {tier}: # refers to a tag 'materials:tier/{tier}/unlocks'
-#     {hardcoded hardness}:
-#       - "{block or tag}": {custom hardness}
+#     {new custom hardness}:
+#       - "{block or tag reference}": {blocks hardcoded hardness}
 
 stone:
-    1.5: 
-        - "#materials:variants/clean_stone_blocks": 3
     2:
-        - "#materials:variants/cobblestone_blocks": 2
+        - "#materials:hardness_group/cobblestone_blocks": 2
+    3:
+        - "#materials:hardness_group/clean_stone_blocks_1": 1.5
+        - "#materials:hardness_group/clean_stone_blocks_2": 2
+
+copper:
+
+
+iron:
+    4:
+        - "#materials:hardness_group/hard_stone_blocks": 1.5
+    5:
+        - "#materials:hardness_group/iron_blocks": 5
+        - "minecraft:cauldron": 2
+
 diamond:
-    1.5:
-        - "#materials:variants/quartz_blocks": 2
-        - "minecraft:amethyst_block": 5
+    5:
+        - "#materials:hardness_group/quartz_blocks": 1.5
+        - "minecraft:amethyst_block": 1.5
+        - "minecraft:budding_amethyst": 1.5
