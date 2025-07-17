@@ -9,7 +9,7 @@ stone:
         - "#materials:hardness_group/clean_stone_blocks_1": 1.5
         - "#materials:hardness_group/clean_stone_blocks_2": 2
 
-copper:
+# copper:
 
 
 iron:

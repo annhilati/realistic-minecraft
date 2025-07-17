@@ -6,6 +6,9 @@ components:
     # On multiple overriding matches: First is chosen
     - blocks: "#materials:tier/iron/cannot_mine"
       correct_for_drops": false
+    #
+    # Here are missing rules for all desired hardnesses
+    #
     - blocks: "#minecraft:mineable/pickaxe"
       correct_for_drops": true
       speed: 6.0

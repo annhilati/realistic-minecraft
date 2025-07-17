@@ -22,16 +22,17 @@ def tag_building_requirements(ctx: Context) -> Plugin:
     ctx.data.extend_namespace.append(Tag)
 
 def build_tags(ctx: Context):
+    dp = ctx.data
+    
     with open("src/atlas.yml", "r") as f:
         data: dict[str, dict[float, list[dict]]] = yaml.safe_load(f)
 
-    print(data)
-    dp = ctx.data
-
-    for tier, vanilla_hardnesses in data.items():
-        for vanilla_hardness, blocks in vanilla_hardnesses.items():
+    for tier, hardnesses in data.items():
+        for hardness, blocks in hardnesses.items():
             for block_entry in blocks:
                 block = next(iter(block_entry))
-                hardness = next(iter(block_entry))
+                vanilla_hardness = next(iter(block_entry.values()))
 
                 dp[Tag].setdefault(f"materials:tier/{tier}/unlocks").merge(Tag({"values": [block]}))
+
+                # Missing code for hardness tags
