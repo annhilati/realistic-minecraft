@@ -2,6 +2,9 @@
 #     {new custom hardness}:
 #       - "{block or tag reference}": {blocks hardcoded hardness}
 
+wood:
+    2:
+        - "#materials:hardness_group/tuff_blocks": 1.5
 stone:
     2:
         - "#materials:hardness_group/cobblestone_blocks": 2
