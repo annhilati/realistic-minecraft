@@ -8,6 +8,6 @@ output: .
 require:
   - beet.contrib.optifine
 pipeline:
-  - plugin.main
-  - plugin.build_tags
+  - caveman.implement_pickaxes
+  - caveman.build_tags
   - ctm_slicer

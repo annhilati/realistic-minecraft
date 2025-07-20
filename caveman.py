@@ -4,12 +4,12 @@ from beet import Context, BlockTag, Plugin, NamespaceFileScope
 from beetsmith.toolchain.file import load_from_file
 from typing import ClassVar
 
-def main(ctx: Context):
-    items = [
+def implement_pickaxes(ctx: Context):
+    pickaxes = [
         (Path("Caveman/items/iron_pickaxe.yml"), "minecraft:iron_pickaxe")
     ]
   
-    for item in items:
+    for item in pickaxes:
         instance = load_from_file(item[0])
         instance.item = item[1]
         instance.components.attribute_modifiers = None
@@ -20,6 +20,7 @@ def build_tags(ctx: Context):
     
     with open("Caveman/atlas.yml", "r") as f:
         data: dict[str, dict[float, list[dict]]] = yaml.safe_load(f)
+
     for tier, hardnesses in data.items():
         for hardness, blocks in hardnesses.items():
             for block_entry in blocks:

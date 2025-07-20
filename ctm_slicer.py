@@ -4,7 +4,6 @@ from PIL import Image
 from beet import Context
 from beet.contrib.optifine import OptifineTexture
 
-
 def main(ctx: Context):
     ctm_textures = {
         resource_location: file

@@ -1,21 +1,21 @@
 {
   "block.minecraft.coal_ore": "Anthrazit",
 
+  "item.minecraft.raw_copper": "Malachit",
   "block.minecraft.raw_copper_block": "Malachitblock",
   "block.minecraft.deepslate_copper_ore": "Tiefenschiefer-Malachiterz",
   "block.minecraft.copper_ore": "Malachiterz",
-  "item.minecraft.raw_copper": "Malachit",
 
-  "advancements.story.smelt_iron.description": "Verhütte Hämatit im Ofen zu einem Eisenbarren",
+  "item.minecraft.raw_iron": "Hämatit",
   "block.minecraft.raw_iron_block": "Hämatitblock",
   "block.minecraft.deepslate_iron_ore": "Tiefenschiefer-Hämatiterz",
   "block.minecraft.iron_ore": "Hämatiterz",
-  "item.minecraft.raw_iron": "Hämatit",
+  "advancements.story.smelt_iron.description": "Verhütte Hämatit im Ofen zu einem Eisenbarren",
 
+  "item.minecraft.raw_gold": "Calaverit",
   "block.minecraft.raw_gold_block": "Calaveritblock",
   "block.minecraft.deepslate_gold_ore": "Tiefenschiefer-Calaveriterz",
   "block.minecraft.gold_ore": "Calaveriterz",
-  "item.minecraft.raw_gold": "Calaverit",
 
   "block.minecraft.lapis_ore": "Lapislazuli",
   "block.minecraft.deepslate_lapis_ore": "Tiefenschiefer-Lapislazuli",
