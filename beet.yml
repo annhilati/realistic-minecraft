@@ -1,9 +1,12 @@
 data_pack:
   load:
     - src
+resource_pack:
+  load:
+    - GAM
 output: .
 require:
   - plugin.tag_building_requirements
 pipeline:
-  - plugin.main
+  # - plugin.main
   - plugin.build_tags

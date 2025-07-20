@@ -1,0 +1,43 @@
+{
+  "block.minecraft.coal_ore": "Anthrazit",
+
+  "block.minecraft.raw_copper_block": "Malachitblock",
+  "block.minecraft.deepslate_copper_ore": "Tiefenschiefer-Malachiterz",
+  "block.minecraft.copper_ore": "Malachiterz",
+  "item.minecraft.raw_copper": "Malachit",
+
+  "advancements.story.smelt_iron.description": "Verhütte Hämatit im Ofen zu einem Eisenbarren",
+  "block.minecraft.raw_iron_block": "Hämatitblock",
+  "block.minecraft.deepslate_iron_ore": "Tiefenschiefer-Hämatiterz",
+  "block.minecraft.iron_ore": "Hämatiterz",
+  "item.minecraft.raw_iron": "Hämatit",
+
+  "block.minecraft.raw_gold_block": "Calaveritblock",
+  "block.minecraft.deepslate_gold_ore": "Tiefenschiefer-Calaveriterz",
+  "block.minecraft.gold_ore": "Calaveriterz",
+  "item.minecraft.raw_gold": "Calaverit",
+
+  "block.minecraft.lapis_ore": "Lapislazuli",
+  "block.minecraft.deepslate_lapis_ore": "Tiefenschiefer-Lapislazuli",
+  "block.minecraft.lapis_block": "Lasuritblock",
+  "container.enchant.lapis.many": "%s Lasurit",
+  "container.enchant.lapis.one": "1 Lasurit",
+  "item.minecraft.lapis_lazuli": "Lasurit",
+  "trim_material.minecraft.lapis": "Lasurit",
+
+  "block.minecraft.amethyst_cluster": "Amethyststufe",
+  "block.minecraft.budding_amethyst": "Amethystmatrix",
+  "block.minecraft.small_amethyst_bud": "Kleiner Amethystcluster",
+  "block.minecraft.medium_amethyst_bud": "Mittlerer Amethystcluster",
+  "block.minecraft.large_amethyst_bud": "Großer Amethystcluster",
+  "item.minecraft.amethyst_shard": "Amethyst",
+
+  "advancements.nether.obtain_ancient_debris.description": "Beschaffe Scheelit",
+  "block.minecraft.ancient_debris": "Scheeliterz",
+  "item.minecraft.netherite_scrap": "Wolfram",
+
+  "item.minecraft.quartz": "Quarz",
+  "block.minecraft.nether_quartz_ore": "Nethergangquarz",
+
+  "block.minecraft.dripstone_block": "Sinterkalzit"
+}
