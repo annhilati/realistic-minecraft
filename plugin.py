@@ -12,6 +12,7 @@ def main(ctx: Context):
     for item in items:
         instance = load_from_file(item[0])
         instance.item = item[1]
+        instance.components.attribute_modifiers = None
         instance.implement(ctx.data)
 
 def build_tags(ctx: Context):
