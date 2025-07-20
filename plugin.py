@@ -1,18 +1,19 @@
 import yaml
 from pathlib import Path
 from beet import Context, TagFile, Plugin, NamespaceFileScope
-# from beetsmith.toolchain.file import load_from_file
+from beetsmith.toolchain.file import load_from_file
 from typing import ClassVar
 
-# def main(ctx: Context):
-#     items = [
-#         (Path("src/items/iron_pickaxe.yml"), "minecraft:iron_pickaxe")
-#     ]
-    
-#     for item in items:
-#         instance = load_from_file(item[0])
-#         instance.item = item[1]
-#         instance.implement(ctx.data)
+def main(ctx: Context):
+    items = [
+        (Path("src/items/iron_pickaxe.yml"), "minecraft:iron_pickaxe")
+    ]
+  
+    for item in items:
+        instance = load_from_file(item[0])
+        instance.item = item[1]
+        instance.implement(ctx.data)
+
 class Tag(TagFile):
     scope: ClassVar[NamespaceFileScope] = ("tags",)
 

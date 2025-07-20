@@ -4,8 +4,6 @@ from PIL import Image
 from beet import Context
 from beet.contrib.optifine import OptifineTexture
 
-def beet_default(ctx: Context):
-    ctx.require(main)
 
 def main(ctx: Context):
     ctm_textures = {
@@ -17,7 +15,7 @@ def main(ctx: Context):
     for resource_location, file in ctm_textures.items():
         print(f"Slicing {resource_location}")
         try:
-            tiles = slice_image_by_tiles(file.image)
+            tiles = slice_image_by_ratio(file.image)
             
             for n, tile in enumerate(tiles):
                 new_name = re.sub(r'\b\d+-\d+\b', str(n), resource_location)
@@ -34,7 +32,7 @@ ratios = {
     7.0: (7, 1),
 }
 
-def slice_image_by_tiles(image: Image.Image):
+def slice_image_by_ratio(image: Image.Image):
     w, h = image.size
 
     if ratios.get(w / h) is None:
@@ -57,3 +55,6 @@ def slice_image_by_tiles(image: Image.Image):
             tiles.append(tile)
 
     return tiles
+
+def beet_default(ctx: Context):
+    ctx.require(main)
