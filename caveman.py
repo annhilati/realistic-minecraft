@@ -1,7 +1,7 @@
 import yaml
 from pathlib import Path
 from beet import Context, BlockTag
-from beetsmith.toolchain.file import load_from_file
+from beetsmith import load_from_file
 
 def implement_pickaxes(ctx: Context):
     pickaxes = [
