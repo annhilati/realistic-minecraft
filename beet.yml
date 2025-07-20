@@ -11,4 +11,4 @@ require:
 pipeline:
   # - plugin.main
   - plugin.build_tags
-  - slicer.main
+  - ctm_slicer
