@@ -20,8 +20,8 @@ def build_tags(ctx: Context):
     with open("Caveman/atlas.yml", "r") as f:
         data: dict[str, dict[float, list[dict]]] = yaml.safe_load(f)
 
-    for tier, hardnesses in data.items():
-        for hardness, blocks in hardnesses.items():
+    for tier, toughnesses in data.items():
+        for toughness, blocks in toughnesses.items():
             for block_entry in blocks:
                 block = next(iter(block_entry))
                 vanilla_hardness = next(iter(block_entry.values()))
