@@ -1,14 +1,13 @@
 data_pack:
   load:
-    - src
+    - Caveman
 resource_pack:
   load:
     - GAM
 output: .
 require:
-  - plugin.tag_building_requirements
   - beet.contrib.optifine
 pipeline:
-  # - plugin.main
+  - plugin.main
   - plugin.build_tags
   - ctm_slicer
