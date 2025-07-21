@@ -3,8 +3,10 @@
 #       - "{block or tag reference}": {blocks hardcoded hardness}
 
 wood:
-    2:
-        - "#materials:hardness_group/tuff_blocks": 1.5
+#     2:
+#         - "#materials:hardness_group/tuff_blocks": 1.5
+    1:
+        - "minecraft:air": 1
 stone:
     2:
         - "#materials:hardness_group/cobblestone_blocks": 2
@@ -12,8 +14,12 @@ stone:
         - "#materials:hardness_group/clean_stone_blocks/1_5": 1.5
         - "#materials:hardness_group/clean_stone_blocks/2": 2
 
-# copper:
-
+gold:
+    1:
+        - "minecraft:air": 1
+copper:
+    1:
+        - "minecraft:air": 1
 
 iron:
     4:
@@ -22,9 +28,14 @@ iron:
         - "#materials:hardness_group/iron_blocks/5": 5
         - "minecraft:cauldron": 2
 
+
 diamond:
     5:
         - "#materials:hardness_group/quartz_blocks/0_8": 0.8
         - "#materials:hardness_group/quartz_blocks/2": 2
         - "minecraft:amethyst_block": 1.5
         - "minecraft:budding_amethyst": 1.5
+
+netherite:
+    1:
+        - "minecraft:air": 1

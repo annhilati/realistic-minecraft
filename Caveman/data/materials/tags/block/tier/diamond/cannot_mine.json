@@ -1,5 +1,5 @@
 {
     "values": [
-        "materials:tier/netherite/unlocks"
+        "#materials:tier/netherite/unlocks"
     ]
 }

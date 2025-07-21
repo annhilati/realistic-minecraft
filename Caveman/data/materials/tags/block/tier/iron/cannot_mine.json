@@ -1,6 +1,6 @@
 {
     "values": [
-        "materials:tier/diamond/unlocks",
-        "materials:tier/netherite/unlocks"
+        "#materials:tier/diamond/unlocks",
+        "#materials:tier/netherite/unlocks"
     ]
 }

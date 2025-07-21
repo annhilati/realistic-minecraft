@@ -1,8 +1,8 @@
 {
     "values": [
-        "materials:tier/copper/unlocks",
-        "materials:tier/iron/unlocks",
-        "materials:tier/diamond/unlocks",
-        "materials:tier/netherite/unlocks"
+        "#materials:tier/copper/unlocks",
+        "#materials:tier/iron/unlocks",
+        "#materials:tier/diamond/unlocks",
+        "#materials:tier/netherite/unlocks"
     ]
 }

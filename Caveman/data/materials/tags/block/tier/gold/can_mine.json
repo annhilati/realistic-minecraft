@@ -1,7 +1,7 @@
 {
     "values": [
-        "materials:tier/wood/can_mine",
-        "materials:tier/stone/can_mine",
-        "materials:tier/gold/unlocks"
+        "#materials:tier/wood/can_mine",
+        "#materials:tier/stone/can_mine",
+        "#materials:tier/gold/unlocks"
     ]
 }
