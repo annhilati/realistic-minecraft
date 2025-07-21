@@ -1,18 +1,33 @@
-name:
-  translate: minecraft.item.stone_pickaxe
-model: minecraft:stone_pickaxe
 components:
   tool:
     rules:
-      # On multiple overriding matches: First is chosen
+
       - blocks: "#materials:tier/stone/cannot_mine"
         correct_for_drops: false
-      #
-      # Here are missing rules for all desired hardnesses
-      #
+      
+      - blocks: "#materials:toughness_modifier/1.0"
+        speed: 4.0
+      - blocks: "#materials:toughness_modifier/1.5"
+        speed: 2.67
+      - blocks: "#materials:toughness_modifier/2.0"
+        speed: 2
+      - blocks: "#materials:toughness_modifier/2.5"
+        speed: 1.6
+      - blocks: "#materials:toughness_modifier/2.67"
+        speed: 1.54
+      - blocks: "#materials:toughness_modifier/3.33"
+        speed: 1.21
+      - blocks: "#materials:toughness_modifier/6.25"
+        speed: 0.64
+
       - blocks: "#minecraft:mineable/pickaxe"
         speed: 6.0
         correct_for_drops: true
+
     can_destroy_blocks_in_creative: false
+
 type: CustomItem
 id: minecraft:stone_pickaxe
+name:
+  translate: minecraft.item.stone_pickaxe
+model: minecraft:stone_pickaxe

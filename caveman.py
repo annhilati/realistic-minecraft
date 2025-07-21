@@ -32,4 +32,6 @@ def build_tags(ctx: Context):
                 block = next(iter(block_entry))
                 vanilla_hardness = next(iter(block_entry.values()))
                 dp[BlockTag].setdefault(f"materials:tier/{tier}/unlocks").merge(BlockTag({"values": [block]}))
-                # Missing code for hardness tags
+                
+                value = round(toughness / vanilla_hardness, 2)
+                dp[BlockTag].setdefault(f"materials:toughness_modifier/{value}").merge(BlockTag({"values": [block]}))
