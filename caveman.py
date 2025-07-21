@@ -5,13 +5,19 @@ from beetsmith import load_from_file
 
 def implement_pickaxes(ctx: Context):
     pickaxes = [
-        (Path("Caveman/items/iron_pickaxe.yml"), "minecraft:iron_pickaxe")
+        (Path("Caveman/items/iron_pickaxe.yml"), "minecraft:iron_pickaxe"),
+        (Path("Caveman/items/wooden_pickaxe.yml"), "minecraft:wooden_pickaxe"),
+        (Path("Caveman/items/stone_pickaxe.yml"), "minecraft:stone_pickaxe")
     ]
   
     for item in pickaxes:
         instance = load_from_file(item[0])
         instance.item = item[1]
         instance.components.attribute_modifiers = None
+        instance.removed_components = []
+        instance.components.unbreakable = None
+        instance.components.max_stack_size = None
+        instance.components
         instance.implement(ctx.data)
 
 def build_tags(ctx: Context):

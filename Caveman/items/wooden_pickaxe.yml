@@ -1,18 +1,18 @@
 name:
-  translate: minecraft.item.iron_pickaxe
-model: minecraft:iron_pickaxe
+  translate: minecraft.item.wooden_pickaxe
+model: minecraft:wooden_pickaxe
 components:
   tool:
     rules:
       # On multiple overriding matches: First is chosen
-      - blocks: "#materials:tier/iron/cannot_mine"
+      - blocks: "#materials:tier/wood/cannot_mine"
         correct_for_drops: false
       #
       # Here are missing rules for all desired hardnesses
       #
       - blocks: "#minecraft:mineable/pickaxe"
-        speed: 6.0
+        speed: 1.0
         correct_for_drops: true
     can_destroy_blocks_in_creative: false
 type: CustomItem
-id: minecraft:iron_pickaxe
+id: minecraft:wooden_pickaxe
