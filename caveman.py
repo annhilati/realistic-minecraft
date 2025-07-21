@@ -1,18 +1,40 @@
 import yaml
 from pathlib import Path
 from beet import Context, BlockTag
-from beetsmith import load_from_file
+from beetsmith import load_from_file, CustomItem
 
 def implement_pickaxes(ctx: Context):
-    pickaxes = [
-        (Path("Caveman/items/iron_pickaxe.yml"), "minecraft:iron_pickaxe"),
-        (Path("Caveman/items/wooden_pickaxe.yml"), "minecraft:wooden_pickaxe"),
-        (Path("Caveman/items/stone_pickaxe.yml"), "minecraft:stone_pickaxe")
-    ]
-  
-    for item in pickaxes:
-        instance = load_from_file(item[0])
-        instance.item = item[1]
+    dp = ctx.data
+
+    with open("Caveman/pickaxes.yml", "r") as f:
+        data: dict[str, float] = yaml.safe_load(f)
+
+    for pickaxe, specs in data.items():
+        default_speed = specs["speed"]
+        tier = specs["tier"]
+
+        instance = CustomItem(pickaxe, {"translate": f"item.{pickaxe.replace(":", ".")}"}, pickaxe)
+
+        instance.components.tool = {
+            "rules": [
+                {
+                    "blocks": f"#materials:tier/{tier}/cannot_mine",
+                    "correct_for_drops": False
+                },
+                *[{
+                    "blocks": f"#{modifier}",
+                    "speed": round(default_speed / float(modifier.split("/")[-1]), 2)
+                }
+                for modifier in [modifier for modifier in dp[BlockTag] if modifier.startswith("materials:toughness_modifier")]],
+                {
+                    "blocks": "#minecraft:mineable/pickaxe",
+                    "speed": default_speed,
+                    "correct_for_drops": True
+                },
+            ]
+        }
+
+        instance.item = pickaxe
         instance.components.attribute_modifiers = None
         instance.removed_components = []
         instance.components.unbreakable = None

@@ -1,0 +1,21 @@
+minecraft:iron_pickaxe:
+  tier: iron
+  speed: 6.0
+minecraft:diamond_pickaxe:
+  tier: diamond
+  speed: 9.0
+minecraft:netherite_pickaxe: 
+  tier: netherite
+  speed: 11.0
+minecraft:wooden_pickaxe: 
+  tier: wood
+  speed: 2.0
+minecraft:stone_pickaxe:
+  tier: stone
+  speed: 3.0
+minecraft:copper_pickaxe: 
+  tier: copper
+  speed: 4.0
+minecraft:golden_pickaxe:
+  tier: gold
+  speed: 3.0
