@@ -8,38 +8,37 @@ wood:
 
 stone:
     2:
-        - "#materials:hardness_group/tuff_blocks": 1.5
-        - "#materials:hardness_group/terracotta": 1.25
-        - "#materials:hardness_group/glazed_terracotta": 1.4
-        - "#materials:hardness_group/concrete": 1.8
+        - "#materials:group/tuff_blocks": 1.5
+        - "#materials:group/terracotta": 1.25
+        - "#materials:group/glazed_terracotta": 1.4
+        - "#materials:group/concrete": 1.8
+        - "#materials:group/cobblestone_blocks": 2
 
 gold:
     1:
         - "minecraft:air": 1
 
 copper:
-    2:
-        - "#materials:hardness_group/cobblestone_blocks": 2
     3:
-        - "#materials:hardness_group/clean_stone_blocks/1_5": 1.5
-        - "#materials:hardness_group/clean_stone_blocks/2": 2
+        - "#materials:group/stone_blocks/1_5": 1.5
+        - "#materials:group/stone_blocks/2": 2
 
 iron:
     4:
-        - "#materials:hardness_group/hard_stone_blocks": 1.5
-        - "#materials:hardness_group/blackstone_blocks/1_5": 1.5
-        - "#materials:hardness_group/blackstone_blocks/2": 2
+        - "#materials:group/hard_stone_blocks": 1.5
+        - "#materials:group/blackstone_blocks/1_5": 1.5
+        - "#materials:group/blackstone_blocks/2": 2
     5:
-        - "#materials:hardness_group/iron_blocks/5": 5
+        - "#materials:group/iron_blocks/5": 5
         - "minecraft:cauldron": 2
 
 diamond:
     4:
-        - "#materials:hardness_group/deepslate_products": 3.5
+        - "#materials:group/deepslate_products": 3.5
         - "minecraft:deepslate": 3
     5:
-        - "#materials:hardness_group/quartz_blocks/0_8": 0.8
-        - "#materials:hardness_group/quartz_blocks/2": 2
+        - "#materials:group/quartz_blocks/0_8": 0.8
+        - "#materials:group/quartz_blocks/2": 2
         - "minecraft:nether_quartz_ore": 3
         - "minecraft:amethyst_block": 1.5
         - "minecraft:budding_amethyst": 1.5
