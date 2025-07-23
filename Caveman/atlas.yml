@@ -3,8 +3,15 @@
 #       - "{block or tag reference}": {blocks hardcoded hardness}
 
 wood:
-    1:
-        - "air": 1
+    2:
+        - "#materials:group/brick_blocks": 2
+        - "#materials:group/cobblestone_blocks": 2
+    3:
+        - "#materials:group/purpur_blocks/1_5": 1.5
+        - "#materials:group/purpur_blocks/2": 2
+    4:
+        - "#materials:group/blackstone_blocks/1_5": 1.5
+        - "#materials:group/blackstone_blocks/2": 2
 
 stone:
     2:
@@ -12,30 +19,56 @@ stone:
         - "#materials:group/terracotta": 1.25
         - "#materials:group/glazed_terracotta": 1.4
         - "#materials:group/concrete": 1.8
-        - "#materials:group/cobblestone_blocks": 2
+        - "minecraft:bone_block": 2
+    3:
+        - "minecraft:copper_ore": 3
+        - "minecraft:raw_copper_block": 5
+        - "minecraft:gold_ore": 3
+        - "minecraft:raw_gold_block": 5
+    4:
+        - "#materials:group/sandstone_blocks/0_8": 0.8
+        - "#materials:group/sandstone_blocks/2": 2
 
 gold:
-    1:
-        - "minecraft:air": 1
+    2:
+        - "minecraft:netherrack": 0.4
+    # 3:
+    #     - "#materials:group/nether_brick-blocks"
 
 copper:
     3:
         - "#materials:group/stone_blocks/1_5": 1.5
         - "#materials:group/stone_blocks/2": 2
+        - "#materials:group/copper_blocks": 3
+        - "minecraft:coal_ore": 3
+        - "minecraft:coal_block": 5
+        - "minecraft:deepslate_coal_ore": 4.5
+        - "minecraft:magma_block": 0.5
 
 iron:
     4:
-        - "#materials:group/hard_stone_blocks": 1.5
-        - "#materials:group/blackstone_blocks/1_5": 1.5
-        - "#materials:group/blackstone_blocks/2": 2
+        - "minecraft:lapis_ore": 3
+        - "minecraft:deepslate_lapis_ore": 4.5
     5:
+        - "#materials:group/hard_stone_blocks": 1.5
+        - "#materials:group/prismarine_blocks": 1.5
+        - "#materials:group/basalt_blocks": 1.25
+    6:
+        - "minecraft:diamond_ore": 3
         - "#materials:group/iron_blocks/5": 5
         - "minecraft:cauldron": 2
 
 diamond:
     4:
-        - "#materials:group/deepslate_products": 3.5
         - "minecraft:deepslate": 3
+        - "minecraft:deepslate_copper_ore": 4.5
+        - "minecraft:deepslate_iron_ore": 4.5
+        - "minecraft:deepslate_gold_ore": 4.5
+        - "minecraft:deepslate_diamond_ore": 4.5
+        - "minecraft:deepslate_redstone_ore": 4.5
+        - "minecraft:deepslate_emerald_ore": 4.5
+        - "#materials:group/deepslate_products": 3.5
+        - "minecraft:nether_quartz_ore": 3
     5:
         - "#materials:group/quartz_blocks/0_8": 0.8
         - "#materials:group/quartz_blocks/2": 2
@@ -43,8 +76,12 @@ diamond:
         - "minecraft:amethyst_block": 1.5
         - "minecraft:budding_amethyst": 1.5
     6:
-        - "minecraft:ancient_debris": 30
+        - "#materials:group/endstone_blocks": 3
+    7:
+        - "#materials:group/obsidian_blocks": 50
 
 netherite:
+    7:
+        - "minecraft:ancient_debris": 30
     9:
         - "minecraft:netherite_block": 50

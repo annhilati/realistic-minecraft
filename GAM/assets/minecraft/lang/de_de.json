@@ -1,5 +1,6 @@
 {
   "block.minecraft.coal_ore": "Anthrazit",
+  "block.minecraft.deepslate_coal_ore": "Anthrazit",
 
   "item.minecraft.raw_copper": "Malachit",
   "block.minecraft.raw_copper_block": "Malachitblock",
@@ -18,7 +19,7 @@
   "block.minecraft.gold_ore": "Calaveriterz",
 
   "block.minecraft.lapis_ore": "Lapislazuli",
-  "block.minecraft.deepslate_lapis_ore": "Tiefenschiefer-Lapislazuli",
+  "block.minecraft.deepslate_lapis_ore": "Lapislazuli",
   "block.minecraft.lapis_block": "Lasuritblock",
   "container.enchant.lapis.many": "%s Lasurit",
   "container.enchant.lapis.one": "1 Lasurit",
