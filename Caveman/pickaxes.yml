@@ -1,21 +1,81 @@
 minecraft:wooden_pickaxe: 
   tier: wood
   speed: 2.0
+  recipe:
+    - - "#minecraft:wooden_tool_materials"
+      - "#minecraft:wooden_tool_materials"
+      - "#minecraft:wooden_tool_materials"
+    - - null
+      - "minecraft:stick"
+      - null
+    - - null
+      - "minecraft:stick"
+      - null
 minecraft:stone_pickaxe:
   tier: stone
   speed: 3.0
+  recipe:
+    - - "#minecraft:stone_tool_materials"
+      - "#minecraft:stone_tool_materials"
+      - "#minecraft:stone_tool_materials"
+    - - null
+      - "minecraft:stick"
+      - null
+    - - null
+      - "minecraft:stick"
+      - null
 minecraft:golden_pickaxe:
   tier: gold
   speed: 3.0
+  recipe:
+    - - "#minecraft:gold_tool_materials"
+      - "#minecraft:gold_tool_materials"
+      - "#minecraft:gold_tool_materials"
+    - - null
+      - "minecraft:stick"
+      - null
+    - - null
+      - "minecraft:stick"
+      - null
 minecraft:copper_pickaxe: 
   tier: copper
   speed: 4.0
+  # recipe:
+  #   - - "#minecraft:copper_tool_materials"
+  #     - "#minecraft:copper_tool_materials"
+  #     - "#minecraft:copper_tool_materials"
+  #   - - null
+  #     - "minecraft:stick"
+  #     - null
+  #   - - null
+  #     - "minecraft:stick"
+  #     - null
 minecraft:iron_pickaxe:
   tier: iron
   speed: 6.0
+  recipe:
+    - - "#minecraft:iron_tool_materials"
+      - "#minecraft:iron_tool_materials"
+      - "#minecraft:iron_tool_materials"
+    - - null
+      - "minecraft:stick"
+      - null
+    - - null
+      - "minecraft:stick"
+      - null
 minecraft:diamond_pickaxe:
   tier: diamond
   speed: 9.0
+  recipe:
+    - - "#minecraft:diamond_tool_materials"
+      - "#minecraft:diamond_tool_materials"
+      - "#minecraft:diamond_tool_materials"
+    - - null
+      - "minecraft:stick"
+      - null
+    - - null
+      - "minecraft:stick"
+      - null
 minecraft:netherite_pickaxe: 
   tier: netherite
   speed: 13.0

@@ -2,6 +2,7 @@ import yaml
 from pathlib import Path
 from beet import Context, BlockTag
 from beetsmith import load_from_file, CustomItem
+from beetsmith.library.contrib import shaped_recipe
 
 def implement_pickaxes(ctx: Context):
     dp = ctx.data
@@ -41,6 +42,9 @@ def implement_pickaxes(ctx: Context):
         instance.components.max_stack_size = None
         instance.components
         instance.implement(ctx.data)
+
+        if specs.get("recipe"):
+            ctx.data[pickaxe] = shaped_recipe(instance, specs["recipe"], category="equipment")
 
 def build_tags(ctx: Context):
     dp = ctx.data

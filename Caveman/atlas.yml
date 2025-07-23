@@ -32,8 +32,10 @@ stone:
 gold:
     2:
         - "minecraft:netherrack": 0.4
-    # 3:
-    #     - "#materials:group/nether_brick-blocks"
+        - "#minecraft:nylium": 0.4
+        - "minecraft:nether_gold_ore": 3
+    3:
+        - "#materials:group/nether_brick_blocks": 2
 
 copper:
     3:
@@ -49,6 +51,7 @@ iron:
     4:
         - "minecraft:lapis_ore": 3
         - "minecraft:deepslate_lapis_ore": 4.5
+        - "minecraft:calcite": 0.75
     5:
         - "#materials:group/hard_stone_blocks": 1.5
         - "#materials:group/prismarine_blocks": 1.5
@@ -69,12 +72,13 @@ diamond:
         - "minecraft:deepslate_emerald_ore": 4.5
         - "#materials:group/deepslate_products": 3.5
         - "minecraft:nether_quartz_ore": 3
-    5:
         - "#materials:group/quartz_blocks/0_8": 0.8
         - "#materials:group/quartz_blocks/2": 2
         - "minecraft:nether_quartz_ore": 3
         - "minecraft:amethyst_block": 1.5
         - "minecraft:budding_amethyst": 1.5
+    5:
+        - "minecraft:glowstone": 0.3
     6:
         - "#materials:group/endstone_blocks": 3
     7:
