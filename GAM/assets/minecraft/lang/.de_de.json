@@ -6829,7 +6829,7 @@
     "translation.test.args": "%s %s",
     "translation.test.complex": "Prefix, %s%2$s again %s and %1$s lastly %s and also %1$s again!",
     "translation.test.escape": "%%s %%%s %%%%s %%%%%s",
-    "translation.test.invalid": "Hi %",
+    "translation.test.invalid": "Hi %s",
     "translation.test.invalid2": "Hi %s",
     "translation.test.none": "Hallo, Welt!",
     "translation.test.world": "Welt",

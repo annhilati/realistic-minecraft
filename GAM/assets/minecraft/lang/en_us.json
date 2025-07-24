@@ -1,38 +1,44 @@
 {
-  "block.minecraft.raw_copper_block": "Malachite Block",
+  "block.minecraft.coal_ore": "Anthracite",
+  "block.minecraft.deepslate_coal_ore": "Deepslate Anthracite Ore",
+
+  "item.minecraft.raw_copper": "Malachite",
+  "block.minecraft.raw_copper_block": "Block of Malachite",
   "block.minecraft.deepslate_copper_ore": "Deepslate Malachite Ore",
   "block.minecraft.copper_ore": "Malachite Ore",
-  "item.minecraft.raw_copper": "Malachite",
 
-  "advancements.story.smelt_iron.description": "Smelt an Iron Ingot",
-  "block.minecraft.raw_iron_block": "Hematite Block",
+  "item.minecraft.raw_iron": "Hematite",
+  "block.minecraft.raw_iron_block": "Block of Hematite",
   "block.minecraft.deepslate_iron_ore": "Deepslate Hematite Ore",
   "block.minecraft.iron_ore": "Hematite Ore",
-  "item.minecraft.raw_iron": "Hematite",
+  "advancements.story.smelt_iron.description": "Smelt an iron ingot",
 
-  "block.minecraft.raw_gold_block": "Calaverite Block",
-  "block.minecraft.deepslate_gold_ore": "Deepslate Calaverite Ore",
-  "block.minecraft.gold_ore": "Calaverite Ore",
   "item.minecraft.raw_gold": "Calaverite",
+  "block.minecraft.raw_gold_block": "Block of Calaverite",
+  "block.minecraft.gold_ore": "Calaverite Ore",
+  "block.minecraft.deepslate_gold_ore": "Deepslate Calaverite Ore",
 
   "block.minecraft.lapis_ore": "Lapis Lazuli",
-  "block.minecraft.deepslate_lapis_ore": "Deepslate Lapis Lazuli",
-  "block.minecraft.lapis_block": "Lasurite",
-  "container.enchant.lapis.many": "%s Lasurite",
-  "container.enchant.lapis.one": "1 Lasurite",
-  "item.minecraft.lapis_lazuli": "Lasurite",
-  "trim_material.minecraft.lapis": "Lasurite",
+  "block.minecraft.deepslate_lapis_ore": "Deepslate Lazurite Ore",
+  "block.minecraft.lapis_block": "Block of Lazurite",
+  "container.enchant.lapis.many": "%s Lazurite",
+  "container.enchant.lapis.one": "1 Lazurite",
+  "item.minecraft.lapis_lazuli": "Lazurite",
+  "trim_material.minecraft.lapis": "Lazurite",
 
-  "block.minecraft.amethyst_cluster": "Amethyst Specimen",
-  "block.minecraft.budding_amethyst": "Amethyst Matrix",
-  "block.minecraft.small_amethyst_bud": "Small Amethystcluster",
-  "block.minecraft.medium_amethyst_bud": "Medium Amethystcluster",
-  "block.minecraft.large_amethyst_bud": "Large Amethystcluster",
+  "block.minecraft.amethyst_cluster": "Amethyst Cluster",
+  "block.minecraft.budding_amethyst": "Budding Amethyst",
+  "block.minecraft.small_amethyst_bud": "Small Amethyst Bud",
+  "block.minecraft.medium_amethyst_bud": "Medium Amethyst Bud",
+  "block.minecraft.large_amethyst_bud": "Large Amethyst Bud",
   "item.minecraft.amethyst_shard": "Amethyst",
 
-  "advancements.nether.obtain_ancient_debris.description": "Obtain Scheelite",
+  "advancements.nether.obtain_ancient_debris.description": "Obtain scheelite",
   "block.minecraft.ancient_debris": "Scheelite Ore",
   "item.minecraft.netherite_scrap": "Tungsten",
 
-  "item.minecraft.quartz": "Quartz"
+  "item.minecraft.quartz": "Quartz",
+  "block.minecraft.nether_quartz_ore": "Nether Vein Quartz",
+  
+  "block.minecraft.dripstone_block": "Travertine"
 }
