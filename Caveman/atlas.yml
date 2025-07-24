@@ -51,15 +51,23 @@ iron:
     4:
         - "minecraft:lapis_ore": 3
         - "minecraft:deepslate_lapis_ore": 4.5
+        - "minecraft:lapis_block": 5
         - "minecraft:calcite": 0.75
     5:
         - "#materials:group/hard_stone_blocks": 1.5
         - "#materials:group/prismarine_blocks": 1.5
         - "#materials:group/basalt_blocks": 1.25
+        - "minecraft:redstone_ore": 3
+        - "minecraft:deepslate_redstone_ore": 4.5
+        - "minecraft:redstone_block": 5
+        - "minecraft:emerald_ore": 3
+        - "minecraft:deepslate_emerald_ore": 4.5
+        
     6:
         - "minecraft:diamond_ore": 3
         - "#materials:group/iron_blocks/5": 5
         - "minecraft:cauldron": 2
+        - "minecraft:emerald_block": 5
 
 diamond:
     4:
@@ -82,6 +90,7 @@ diamond:
     6:
         - "#materials:group/endstone_blocks": 3
     7:
+        - "minecraft:diamond_block": 5
         - "#materials:group/obsidian_blocks": 50
 
 netherite:
