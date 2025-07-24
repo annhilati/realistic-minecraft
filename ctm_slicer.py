@@ -4,11 +4,13 @@ from PIL import Image
 from beet import Context
 from beet.contrib.optifine import OptifineTexture
 
+ctm_file_regex = r'\b\d+-\d+'
+
 def main(ctx: Context):
     ctm_textures = {
         resource_location: file
         for resource_location, file in ctx.assets[OptifineTexture].items()
-        if resource_location.startswith("minecraft:ctm") and re.search(r'\b\d+-\d+\b', resource_location) is not None
+        if resource_location.startswith("minecraft:ctm") and re.search(ctm_file_regex, resource_location) is not None
     }
     
     for resource_location, file in ctm_textures.items():
@@ -17,7 +19,7 @@ def main(ctx: Context):
             tiles = slice_image_by_ratio(file.image)
             
             for n, tile in enumerate(tiles):
-                new_name = re.sub(r'\b\d+-\d+\b', str(n), resource_location)
+                new_name = re.sub(ctm_file_regex, str(n), resource_location)
                 ctx.assets[new_name] = OptifineTexture(tile)
         
         except Exception as e:
