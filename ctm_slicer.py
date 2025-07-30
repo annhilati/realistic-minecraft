@@ -7,6 +7,7 @@ from beet.contrib.optifine import OptifineTexture
 ctm_file_regex = r'\b\d+-\d+'
 
 def main(ctx: Context):
+    print("CTM slicing started")
     ctm_textures = {
         resource_location: file
         for resource_location, file in ctx.assets[OptifineTexture].items()
@@ -14,7 +15,7 @@ def main(ctx: Context):
     }
     
     for resource_location, file in ctm_textures.items():
-        print(f"Slicing {resource_location}")
+        #print(f"Slicing {resource_location}")
         try:
             tiles = slice_image_by_ratio(file.image)
             
@@ -24,6 +25,8 @@ def main(ctx: Context):
         
         except Exception as e:
             warnings.warn(f"Couldn't slice {resource_location}: {e}")
+            
+    print("CTM slicing finished")
 
 ratios = {
     7/3: (7, 3),
