@@ -1,8 +1,11 @@
 {
     "pack": {
         "description": "\u00A76  Scientific accurate Ores \n\u00A77     - Pack by \u00A7eAnnhilati\u00A77 -",
+        "supported_formats": {
+            "min_inclusive": 46,
+            "max_inclusive": 64
+        },
         "min_format": 65,
         "max_format": 65,
-        "pack_format": 55
     }
 }
