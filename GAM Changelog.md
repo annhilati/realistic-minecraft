@@ -1,3 +1,7 @@
+## Recent Changes
+### ✨ New Content
+### 🔧 Changes
+
 ## GAM 0.1.0
 ### ✨ New Content
 
@@ -10,7 +14,7 @@
 * Retextured Block of Emerald and Emerald item
 * Retextured Glowstone block. It now uses a texture similar to the Amethyst Block
 
-### 🔧 Changes
+
 * Only normal stone Lapis Ore is Lazurite now
 
 ## GAM 0.0.2

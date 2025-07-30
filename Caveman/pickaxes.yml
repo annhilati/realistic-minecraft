@@ -40,16 +40,16 @@ minecraft:golden_pickaxe:
 minecraft:copper_pickaxe: 
   tier: copper
   speed: 4.0
-  # recipe:
-  #   - - "#minecraft:copper_tool_materials"
-  #     - "#minecraft:copper_tool_materials"
-  #     - "#minecraft:copper_tool_materials"
-  #   - - null
-  #     - "minecraft:stick"
-  #     - null
-  #   - - null
-  #     - "minecraft:stick"
-  #     - null
+  recipe:
+    - - "#minecraft:copper_tool_materials"
+      - "#minecraft:copper_tool_materials"
+      - "#minecraft:copper_tool_materials"
+    - - null
+      - "minecraft:stick"
+      - null
+    - - null
+      - "minecraft:stick"
+      - null
 minecraft:iron_pickaxe:
   tier: iron
   speed: 6.0
