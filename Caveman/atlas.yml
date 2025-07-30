@@ -46,6 +46,7 @@ copper:
         - "minecraft:coal_block": 5
         - "minecraft:deepslate_coal_ore": 4.5
         - "minecraft:magma_block": 0.5
+        - "minecraft:iron_ore"
 
 iron:
     4:
