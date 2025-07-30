@@ -1,5 +1,5 @@
 __pycache__/
 .beet_cache/
-realistic_minecraft_data_pack
-/realistic_minecraft_resource_pack
+*data_pack
+*resource_pack
 *.zip

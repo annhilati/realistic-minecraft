@@ -1,14 +1,13 @@
 import yaml
-from pathlib import Path
 from beet import Context, BlockTag
-from beetsmith import load_from_file, CustomItem
+from beetsmith import CustomItem
 from beetsmith.library.contrib import shaped_recipe
 
 def implement_pickaxes(ctx: Context):
     dp = ctx.data
 
     with open("Caveman/pickaxes.yml", "r") as f:
-        data: dict[str, float] = yaml.safe_load(f)
+        data: dict[str, dict] = yaml.safe_load(f)
 
     for pickaxe, specs in data.items():
         default_speed = specs["speed"]
