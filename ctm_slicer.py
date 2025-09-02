@@ -62,3 +62,4 @@ def slice_image_by_ratio(image: Image.Image):
 
 def beet_default(ctx: Context):
     ctx.require(main)
+
