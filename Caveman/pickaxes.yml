@@ -47,7 +47,7 @@ minecraft:copper_pickaxe:
     type: "minecraft:crafting_shaped"
     category: "equipment"
     key: 
-      "#": "minecraft:stick"
+      S: "minecraft:stick"
       X: "#minecraft:copper_tool_materials"
     pattern: 
       - "XXX"
@@ -61,7 +61,7 @@ minecraft:iron_pickaxe:
     type: "minecraft:crafting_shaped"
     category: "equipment"
     key: 
-      "#": "minecraft:stick"
+      S: "minecraft:stick"
       X: "#minecraft:iron_tool_materials"
     pattern: 
       - "XXX"
@@ -75,7 +75,7 @@ minecraft:diamond_pickaxe:
     type: "minecraft:crafting_shaped"
     category: "equipment"
     key: 
-      "#": "minecraft:stick"
+      S: "minecraft:stick"
       X: "#minecraft:diamond_tool_materials"
     pattern: 
       - "XXX"
