@@ -1,5 +1,5 @@
 import yaml
-from beet import Context, BlockTag
+from beet import Context, BlockTag, Recipe
 from beetsmith import CustomItem
 from beetsmith.library.contrib import shaped_recipe
 
@@ -9,11 +9,11 @@ def implement_pickaxes(ctx: Context):
     with open("Caveman/pickaxes.yml", "r") as f:
         data: dict[str, dict] = yaml.safe_load(f)
 
-    for pickaxe, specs in data.items():
+    for pickaxe_key, specs in data.items():
         default_speed = specs["speed"]
         tier = specs["tier"]
 
-        instance = CustomItem(pickaxe, {"translate": f"item.{pickaxe.replace(":", ".")}"}, pickaxe)
+        instance = CustomItem(pickaxe_key, {"translate": f"item.{pickaxe_key.replace(":", ".")}"}, pickaxe_key)
 
         instance.components.tool = {
             "rules": [
@@ -34,7 +34,7 @@ def implement_pickaxes(ctx: Context):
             ]
         }
 
-        instance.item = pickaxe
+        instance.item = pickaxe_key
         instance.components.attribute_modifiers = None
         instance.removed_components = []
         instance.components.unbreakable = None
@@ -43,7 +43,16 @@ def implement_pickaxes(ctx: Context):
         instance.implement(ctx.data)
 
         if specs.get("recipe"):
-            ctx.data[pickaxe] = shaped_recipe(instance, specs["recipe"], category="equipment")
+            ctx.data[pickaxe_key] = Recipe(
+                {
+                    **specs["recipe"],
+                    "result": {
+                        "count": 1,
+                        "id": pickaxe_key,
+                        "components": instance._components_data
+                    }
+                }
+            )
 
 def build_tags(ctx: Context):
     dp = ctx.data

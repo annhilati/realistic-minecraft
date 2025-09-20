@@ -2,80 +2,91 @@ minecraft:wooden_pickaxe:
   tier: wood
   speed: 2.0
   recipe:
-    - - "#minecraft:wooden_tool_materials"
-      - "#minecraft:wooden_tool_materials"
-      - "#minecraft:wooden_tool_materials"
-    - - null
-      - "minecraft:stick"
-      - null
-    - - null
-      - "minecraft:stick"
-      - null
+    type: "minecraft:crafting_shaped"
+    category: "equipment"
+    key: 
+      S: "minecraft:stick"
+      X: "#minecraft:wooden_tool_materials"
+    pattern: 
+      - "XXX"
+      - " S "
+      - " S "
+
 minecraft:stone_pickaxe:
   tier: stone
   speed: 3.0
   recipe:
-    - - "#minecraft:stone_tool_materials"
-      - "#minecraft:stone_tool_materials"
-      - "#minecraft:stone_tool_materials"
-    - - null
-      - "minecraft:stick"
-      - null
-    - - null
-      - "minecraft:stick"
-      - null
+    type: "minecraft:crafting_shaped"
+    category: "equipment"
+    key: 
+      S: "minecraft:stick"
+      X: "#minecraft:stone_tool_materials"
+    pattern: 
+      - "XXX"
+      - " S "
+      - " S "
+
 minecraft:golden_pickaxe:
   tier: gold
   speed: 3.0
   recipe:
-    - - "#minecraft:gold_tool_materials"
-      - "#minecraft:gold_tool_materials"
-      - "#minecraft:gold_tool_materials"
-    - - null
-      - "minecraft:stick"
-      - null
-    - - null
-      - "minecraft:stick"
-      - null
+    type: "minecraft:crafting_shaped"
+    category: "equipment"
+    key: 
+      S: "minecraft:stick"
+      X: "#minecraft:gold_tool_materials"
+    pattern: 
+      - "XXX"
+      - " S "
+      - " S "
+
 minecraft:copper_pickaxe: 
   tier: copper
   speed: 4.0
   recipe:
-    - - "#minecraft:copper_tool_materials"
-      - "#minecraft:copper_tool_materials"
-      - "#minecraft:copper_tool_materials"
-    - - null
-      - "minecraft:stick"
-      - null
-    - - null
-      - "minecraft:stick"
-      - null
+    type: "minecraft:crafting_shaped"
+    category: "equipment"
+    key: 
+      "#": "minecraft:stick"
+      X: "#minecraft:copper_tool_materials"
+    pattern: 
+      - "XXX"
+      - " S "
+      - " S "
+
 minecraft:iron_pickaxe:
   tier: iron
   speed: 6.0
   recipe:
-    - - "#minecraft:iron_tool_materials"
-      - "#minecraft:iron_tool_materials"
-      - "#minecraft:iron_tool_materials"
-    - - null
-      - "minecraft:stick"
-      - null
-    - - null
-      - "minecraft:stick"
-      - null
+    type: "minecraft:crafting_shaped"
+    category: "equipment"
+    key: 
+      "#": "minecraft:stick"
+      X: "#minecraft:iron_tool_materials"
+    pattern: 
+      - "XXX"
+      - " S "
+      - " S "
+
 minecraft:diamond_pickaxe:
   tier: diamond
   speed: 9.0
   recipe:
-    - - "#minecraft:diamond_tool_materials"
-      - "#minecraft:diamond_tool_materials"
-      - "#minecraft:diamond_tool_materials"
-    - - null
-      - "minecraft:stick"
-      - null
-    - - null
-      - "minecraft:stick"
-      - null
+    type: "minecraft:crafting_shaped"
+    category: "equipment"
+    key: 
+      "#": "minecraft:stick"
+      X: "#minecraft:diamond_tool_materials"
+    pattern: 
+      - "XXX"
+      - " S "
+      - " S "
+
 minecraft:netherite_pickaxe: 
   tier: netherite
   speed: 13.0
+  recipe:
+    type: "minecraft:smithing_transform"
+    base: "minecraft:diamond_pickaxe"
+    addition: "#minecraft:netherite_tool_materials"
+    template: "minecraft:netherite_upgrade_smithing_template"
