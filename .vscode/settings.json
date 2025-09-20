@@ -12,7 +12,8 @@
     "hide-files.files": [
         "__pycache__",
         ".beet_cache",
-        ".vscode"
+        ".vscode",
+        "plugins/__pycache__"
     ],
     "python-envs.defaultEnvManager": "ms-python.python:system",
     "python-envs.pythonProjects": []
