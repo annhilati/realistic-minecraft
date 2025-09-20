@@ -9,6 +9,7 @@
         "minecraft:copper_door",
         "minecraft:copper_trapdoor",
         "minecraft:chiseled_copper",
+        "minecraft:copper_bars",
         
         "minecraft:exposed_copper",
         "minecraft:exposed_cut_copper",
@@ -19,6 +20,7 @@
         "minecraft:exposed_copper_door",
         "minecraft:exposed_copper_trapdoor",
         "minecraft:exposed_chiseled_copper",
+        "minecraft:exposed_copper_bars",
 
         "minecraft:weathered_copper",
         "minecraft:weathered_cut_copper",
@@ -29,6 +31,7 @@
         "minecraft:weathered_copper_door",
         "minecraft:weathered_copper_trapdoor",
         "minecraft:weathered_chiseled_copper",
+        "minecraft:weathered_copper_bars",
 
         "minecraft:oxidized_copper",
         "minecraft:oxidized_cut_copper",
@@ -39,6 +42,7 @@
         "minecraft:oxidized_copper_door",
         "minecraft:oxidized_copper_trapdoor",
         "minecraft:oxidized_chiseled_copper",
+        "minecraft:oxidized_copper_bars",
 
         "minecraft:waxed_copper_block",
         "minecraft:waxed_cut_copper",
@@ -49,6 +53,7 @@
         "minecraft:waxed_copper_door",
         "minecraft:waxed_copper_trapdoor",
         "minecraft:waxed_chiseled_copper",
+        "minecraft:waxed_copper_bars",
         
         "minecraft:waxed_exposed_copper",
         "minecraft:waxed_exposed_cut_copper",
@@ -59,6 +64,7 @@
         "minecraft:waxed_exposed_copper_door",
         "minecraft:waxed_exposed_copper_trapdoor",
         "minecraft:waxed_exposed_chiseled_copper",
+        "minecraft:waxed_exposed_copper_bars",
 
         "minecraft:waxed_weathered_copper",
         "minecraft:waxed_weathered_cut_copper",
@@ -69,6 +75,7 @@
         "minecraft:waxed_weathered_copper_door",
         "minecraft:waxed_weathered_copper_trapdoor",
         "minecraft:waxed_weathered_chiseled_copper",
+        "minecraft:waxed_weathered_copper_bars",
     
         "minecraft:waxed_oxidized_copper",
         "minecraft:waxed_oxidized_cut_copper",
@@ -78,6 +85,7 @@
         "minecraft:waxed_oxidized_copper_bulb",
         "minecraft:waxed_oxidized_copper_door",
         "minecraft:waxed_oxidized_copper_trapdoor",
-        "minecraft:waxed_oxidized_chiseled_copper"
+        "minecraft:waxed_oxidized_chiseled_copper",
+        "minecraft:waxed_oxidized_copper_bars"
     ]
 }
