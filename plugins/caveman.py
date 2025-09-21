@@ -1,13 +1,16 @@
 import yaml
-from beet import Context, BlockTag, Recipe
+from beet import Context, BlockTag, Recipe, LootTable
 from beetsmith import CustomItem
 from beetsmith.library.contrib import shaped_recipe
+import json
 
 def implement_pickaxes(ctx: Context):
     dp = ctx.data
 
     with open("Caveman/pickaxes.yml", "r") as f:
         data: dict[str, dict] = yaml.safe_load(f)
+
+    instances: dict[str, CustomItem] = {}
 
     for pickaxe_key, specs in data.items():
         default_speed = specs["speed"]
@@ -42,6 +45,8 @@ def implement_pickaxes(ctx: Context):
         instance.components
         instance.implement(ctx.data)
 
+        instances[pickaxe_key] = instance
+
         if specs.get("recipe"):
             ctx.data[pickaxe_key] = Recipe(
                 {
@@ -53,6 +58,45 @@ def implement_pickaxes(ctx: Context):
                     }
                 }
             )
+
+
+    from pathlib import Path
+
+    root_dir = Path("C:/Users/Annhilati/Documents/GitHub/realistic-minecraft/1.21.9 loot_table")
+
+    for file_path in root_dir.rglob("*"):
+        if file_path.is_file():
+            loot_table = LootTable(json.loads(file_path.read_text(encoding="utf-8", errors="ignore")))
+
+            def replace_pickaxe_data(obj):
+                if isinstance(obj, dict):
+                    new_obj = {}
+                    for k, v in obj.items():
+                        if isinstance(v, str) and "pickaxe" in v:
+                            # Falls functions schon existieren -> anhängen
+                            funcs = obj.get("functions", [])
+                            funcs.append({
+                                "function": "minecraft:set_components",
+                                "components": instances[v]._components_data
+                            })
+                            new_obj[k] = v  # den Wert behalten
+                            new_obj["functions"] = funcs
+                        else:
+                            new_obj[k] = replace_pickaxe_data(v)
+                    return new_obj
+
+                elif isinstance(obj, list):
+                    return [replace_pickaxe_data(v) for v in obj]
+
+                else:
+                    return obj
+
+            
+            loot_table.data = replace_pickaxe_data(loot_table.data)
+
+            if "pickaxe" in str(loot_table.data):
+                dp["minecraft:" + str(file_path.relative_to(root_dir).with_suffix("")).replace("\\", "/")] = loot_table
+
 
 def build_tags(ctx: Context):
     dp = ctx.data

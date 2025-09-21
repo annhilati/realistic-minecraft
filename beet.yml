@@ -11,8 +11,3 @@ pipeline:
   - plugins.caveman.build_tags
   - plugins.caveman.implement_pickaxes
   - plugins.ctm_slicer
-meta:
-  plugins.caveman.build_tags:
-    atlas: Caveman/atlas.yml
-  plugins.caveman.implement_pickaxes:
-    atlas: Caveman/pickaxes.yml
