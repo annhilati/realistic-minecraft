@@ -8,6 +8,10 @@ output: .
 require:
   - beet.contrib.optifine
 pipeline:
-  - plugins.caveman.build_tags
-  - plugins.caveman.implement_pickaxes
+  - plugins.caveman
   - plugins.ctm_slicer
+meta:
+  caveman:
+    pickaxe_atlas: Caveman/pickaxes.yml
+    block_atlas: Caveman/atlas.yml
+    default_loot_tables: 1.21.9 loot_table
