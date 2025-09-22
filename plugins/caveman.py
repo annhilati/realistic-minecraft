@@ -1,5 +1,5 @@
 import yaml
-from beet import Context, BlockTag, Recipe, LootTable, Plugin   
+from beet import Context, BlockTag, Recipe, LootTable, Plugin, ItemModifier, Advancement, Function
 from beet.core.utils import JsonDict
 from beetsmith import CustomItem
 import json
@@ -66,6 +66,7 @@ def implement_pickaxes(pickaxe_atlas: Path, default_loot_tables: Path) -> Plugin
 
             instances[pickaxe_key] = instance
 
+            # Implement Recipes
             if specs.get("recipe"):
                 ctx.data[pickaxe_key] = Recipe(
                     {
@@ -78,6 +79,15 @@ def implement_pickaxes(pickaxe_atlas: Path, default_loot_tables: Path) -> Plugin
                     }
                 )
 
+            # Implement Item Modifiers
+            ctx.data[pickaxe_key] = ItemModifier(
+                {
+                    "function": "minecraft:set_components",
+                    "components": instance._components_data
+                }
+            )
+
+        print("Loot reparsing started")
         root_dir = default_loot_tables
 
         for file_path in root_dir.rglob("*"):
@@ -112,6 +122,34 @@ def implement_pickaxes(pickaxe_atlas: Path, default_loot_tables: Path) -> Plugin
 
                 if "pickaxe" in str(loot_table.data):
                     dp["minecraft:" + str(file_path.relative_to(root_dir).with_suffix("")).replace("\\", "/")] = loot_table
+        print("Loot reparsing finished")
+
+        # Implement Pickaxe Detecting Advancement
+        dp["caveman:pickaxes"] = Advancement(
+            {
+                "criteria": {
+                    instance.id.split(":")[1]: {
+                        "conditions": {
+                            "items": [
+                                {
+                                    "items": instance.id
+                                }
+                            ]
+                        },
+                        "trigger": "minecraft:inventory_changed"
+                    }
+                    for instance in instances.values()
+                },
+                "requirements": [
+                    [
+                        instance.id.split(":")[1] for instance in instances.values()
+                    ]
+                ]
+            }
+        )
+        dp["caveman:pickaxes"] = Function([
+            
+        ])
 
     return plugin
 
