@@ -29,6 +29,10 @@ def implement_pickaxes(pickaxe_atlas: Path, default_loot_tables: Path) -> Plugin
         with open(pickaxe_atlas, "r") as f:
             data: dict[str, dict] = yaml.safe_load(f)
 
+        # ╭────────────────────────────────────────────────────────────────────────────────╮
+        # │                            Component Configuration                             │ 
+        # ╰────────────────────────────────────────────────────────────────────────────────╯
+
         instances: dict[str, CustomItem] = {}
 
         for pickaxe_key, specs in data.items():
@@ -66,7 +70,11 @@ def implement_pickaxes(pickaxe_atlas: Path, default_loot_tables: Path) -> Plugin
 
             instances[pickaxe_key] = instance
 
-            # Implement Recipes
+        # ╭────────────────────────────────────────────────────────────────────────────────╮
+        # │                              Recipe Implementation                             │ 
+        # ╰────────────────────────────────────────────────────────────────────────────────╯
+            
+            # Yes this has to be inside the for loop
             if specs.get("recipe"):
                 ctx.data[pickaxe_key] = Recipe(
                     {
@@ -79,13 +87,21 @@ def implement_pickaxes(pickaxe_atlas: Path, default_loot_tables: Path) -> Plugin
                     }
                 )
 
-            # Implement Item Modifiers
+        # ╭────────────────────────────────────────────────────────────────────────────────╮
+        # │                          Item Modifier Implementation                          │ 
+        # ╰────────────────────────────────────────────────────────────────────────────────╯
+
+            # Yes this has to be inside the for loop
             ctx.data[pickaxe_key] = ItemModifier(
                 {
                     "function": "minecraft:set_components",
                     "components": instance._components_data
                 }
             )
+
+        # ╭────────────────────────────────────────────────────────────────────────────────╮
+        # │                    Loot Table Reparsing and Implementation                     │ 
+        # ╰────────────────────────────────────────────────────────────────────────────────╯
 
         print("Loot reparsing started")
         root_dir = default_loot_tables
@@ -124,7 +140,10 @@ def implement_pickaxes(pickaxe_atlas: Path, default_loot_tables: Path) -> Plugin
                     dp["minecraft:" + str(file_path.relative_to(root_dir).with_suffix("")).replace("\\", "/")] = loot_table
         print("Loot reparsing finished")
 
-        # Implement Pickaxe Detecting Advancement
+        # ╭────────────────────────────────────────────────────────────────────────────────╮
+        # │                 Pickaxe Detecting Advancement Implementation                   │ 
+        # ╰────────────────────────────────────────────────────────────────────────────────╯
+
         dp["caveman:pickaxes"] = Advancement(
             {
                 "criteria": {
@@ -148,7 +167,7 @@ def implement_pickaxes(pickaxe_atlas: Path, default_loot_tables: Path) -> Plugin
             }
         )
         dp["caveman:pickaxes"] = Function([
-            
+
         ])
 
     return plugin
