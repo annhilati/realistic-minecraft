@@ -1,7 +1,7 @@
 import yaml
 from beet import Context, BlockTag, Recipe, LootTable, Plugin, ItemModifier, Advancement, Function
 from beet.core.utils import JsonDict
-from beetsmith import CustomItem
+from beetsmith import Item
 import json
 from pathlib import Path
 from typing import cast
@@ -33,13 +33,17 @@ def implement_pickaxes(pickaxe_atlas: Path, default_loot_tables: Path) -> Plugin
         # │                            Component Configuration                             │ 
         # ╰────────────────────────────────────────────────────────────────────────────────╯
 
-        instances: dict[str, CustomItem] = {}
+        instances: dict[str, Item] = {}
 
         for pickaxe_key, specs in data.items():
             default_speed = specs["speed"]
             tier = specs["tier"]
 
-            instance = CustomItem(pickaxe_key, {"translate": f"item.{pickaxe_key.replace(":", ".")}"}, pickaxe_key)
+            instance = Item(
+                id = pickaxe_key,
+                name = {"translate": f"item.{pickaxe_key.replace(":", ".")}"},
+                model = pickaxe_key
+            )
 
             instance.components.tool = {
                 "rules": [
@@ -62,7 +66,6 @@ def implement_pickaxes(pickaxe_atlas: Path, default_loot_tables: Path) -> Plugin
 
             instance.item = pickaxe_key
             instance.components.attribute_modifiers = None
-            instance.removed_components = []
             instance.components.unbreakable = None
             instance.components.max_stack_size = None
             instance.components
@@ -82,7 +85,7 @@ def implement_pickaxes(pickaxe_atlas: Path, default_loot_tables: Path) -> Plugin
                         "result": {
                             "count": 1,
                             "id": pickaxe_key,
-                            "components": instance._components_data
+                            "components": instance.components.asDict()
                         }
                     }
                 )
@@ -95,7 +98,7 @@ def implement_pickaxes(pickaxe_atlas: Path, default_loot_tables: Path) -> Plugin
             ctx.data[pickaxe_key] = ItemModifier(
                 {
                     "function": "minecraft:set_components",
-                    "components": instance._components_data
+                    "components": instance.components.asDict()
                 }
             )
 
@@ -106,34 +109,33 @@ def implement_pickaxes(pickaxe_atlas: Path, default_loot_tables: Path) -> Plugin
         print("Loot reparsing started")
         root_dir = default_loot_tables
 
+        def replace_pickaxe_data(obj):
+            if isinstance(obj, dict):
+                new_obj = {}
+                for k, v in obj.items():
+                    if isinstance(v, str) and "pickaxe" in v:
+                        # Falls functions schon existieren -> anhängen
+                        funcs = obj.get("functions", [])
+                        funcs.append({
+                            "function": "minecraft:set_components",
+                            "components": instances[v].components.asDict()
+                        })
+                        new_obj[k] = v  # den Wert behalten
+                        new_obj["functions"] = funcs
+                    else:
+                        new_obj[k] = replace_pickaxe_data(v)
+                return new_obj
+
+            elif isinstance(obj, list):
+                return [replace_pickaxe_data(v) for v in obj]
+
+            else:
+                return obj
+
         for file_path in root_dir.rglob("*"):
             if file_path.is_file():
                 loot_table = LootTable(json.loads(file_path.read_text(encoding="utf-8", errors="ignore")))
 
-                def replace_pickaxe_data(obj):
-                    if isinstance(obj, dict):
-                        new_obj = {}
-                        for k, v in obj.items():
-                            if isinstance(v, str) and "pickaxe" in v:
-                                # Falls functions schon existieren -> anhängen
-                                funcs = obj.get("functions", [])
-                                funcs.append({
-                                    "function": "minecraft:set_components",
-                                    "components": instances[v]._components_data
-                                })
-                                new_obj[k] = v  # den Wert behalten
-                                new_obj["functions"] = funcs
-                            else:
-                                new_obj[k] = replace_pickaxe_data(v)
-                        return new_obj
-
-                    elif isinstance(obj, list):
-                        return [replace_pickaxe_data(v) for v in obj]
-
-                    else:
-                        return obj
-
-                
                 loot_table.data = replace_pickaxe_data(loot_table.data)
 
                 if "pickaxe" in str(loot_table.data):

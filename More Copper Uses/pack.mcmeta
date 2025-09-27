@@ -1,0 +1,12 @@
+{
+    "pack": {
+        "description": "More Copper Uses",
+        "pack_format": 6,
+        "supported_formats": {
+            "min_inclusive": 6,
+            "max_inclusive": 64
+        },
+        "min_format": 65,
+        "max_format": 88
+    }
+}

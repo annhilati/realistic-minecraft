@@ -1,9 +1,11 @@
 data_pack:
   load:
     - Caveman
+    - More Copper Uses
 resource_pack:
   load:
     - GAM
+    - More Copper Uses
 output: .
 require:
   - beet.contrib.optifine
