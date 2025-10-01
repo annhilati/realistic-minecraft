@@ -1,5 +1,5 @@
 import yaml
-from beet import Context, BlockTag, Recipe, LootTable, Plugin, ItemModifier, Advancement, Function
+from beet import Context, BlockTag, Recipe, LootTable, Plugin, ItemModifier, Advancement, Function, FunctionTag
 from beet.core.utils import JsonDict
 from beetsmith import Item
 import json
@@ -79,7 +79,7 @@ def implement_pickaxes(pickaxe_atlas: Path, default_loot_tables: Path) -> Plugin
             
             # Yes this has to be inside the for loop
             if specs.get("recipe"):
-                ctx.data[pickaxe_key] = Recipe(
+                dp[pickaxe_key] = Recipe(
                     {
                         **specs["recipe"],
                         "result": {
@@ -95,12 +95,22 @@ def implement_pickaxes(pickaxe_atlas: Path, default_loot_tables: Path) -> Plugin
         # ╰────────────────────────────────────────────────────────────────────────────────╯
 
             # Yes this has to be inside the for loop
-            ctx.data[pickaxe_key] = ItemModifier(
+            dp[pickaxe_key] = ItemModifier(
                 {
                     "function": "minecraft:set_components",
-                    "components": instance.components.asDict()
+                    "components": {
+                        "minecraft:tool": instance.components.asDict()["minecraft:tool"]
+                    }
                 }
             )
+
+            dp.functions.setdefault("caveman:pickaxes").append(Function([
+                f"execute if items entity @s weapon.mainhand {pickaxe_key}[minecraft:tool!={instance.components.asDict()["minecraft:tool"]}] run item modify entity @s weapon.mainhand {pickaxe_key}",
+                "Hallo?"
+            ]))
+            dp.function_tags.setdefault("minecraft:tick").merge(FunctionTag({
+                "values": ["caveman:pickaxes"]
+            }))
 
         # ╭────────────────────────────────────────────────────────────────────────────────╮
         # │                    Loot Table Reparsing and Implementation                     │ 
