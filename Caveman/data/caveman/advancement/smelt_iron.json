@@ -1,0 +1,34 @@
+{
+  "parent": "caveman:mine_iron",
+  "criteria": {
+    "smelt_iron": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:iron_ingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.story.smelt_iron.description"
+    },
+    "icon": {
+      "count": 2,
+      "id": "minecraft:iron_ingot"
+    },
+    "title": {
+      "translate": "none",
+      "fallback": "300000 Jahre Menschheitsgeschichte"
+    }
+  },
+  "requirements": [
+    [
+      "smelt_iron"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,35 @@
+{
+  "parent": "caveman:copper_tools",
+  "criteria": {
+    "smelt_iron": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:raw_iron"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.story.mine_iron.description",
+      "fallback": ""
+    },
+    "icon": {
+      "count": 2,
+      "id": "minecraft:raw_iron"
+    },
+    "title": {
+      "translate": "advancements.story.mine_iron.title",
+      "fallback": ""
+    }
+  },
+  "requirements": [
+    [
+      "smelt_iron"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

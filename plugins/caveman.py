@@ -1,7 +1,7 @@
 import yaml
 from beet import Context, BlockTag, Recipe, LootTable, Plugin, ItemModifier, Advancement, Function, FunctionTag
 from beet.core.utils import JsonDict
-from beetsmith import Item
+from beetsmith import Item, ItemComponents
 import json
 from pathlib import Path
 from typing import cast
@@ -105,8 +105,7 @@ def implement_pickaxes(pickaxe_atlas: Path, default_loot_tables: Path) -> Plugin
             )
 
             dp.functions.setdefault("caveman:pickaxes").append(Function([
-                f"execute if items entity @s weapon.mainhand {pickaxe_key}[minecraft:tool!={instance.components.asDict()["minecraft:tool"]}] run item modify entity @s weapon.mainhand {pickaxe_key}",
-                "Hallo?"
+                f"execute as @a if items entity @s weapon.mainhand {pickaxe_key}[minecraft:tool={ItemComponents.fromVanillaItem(pickaxe_key).asDict()["minecraft:tool"]}] run item modify entity @s weapon.mainhand {pickaxe_key}",
             ]))
             dp.function_tags.setdefault("minecraft:tick").merge(FunctionTag({
                 "values": ["caveman:pickaxes"]
@@ -178,9 +177,6 @@ def implement_pickaxes(pickaxe_atlas: Path, default_loot_tables: Path) -> Plugin
                 ]
             }
         )
-        dp["caveman:pickaxes"] = Function([
-
-        ])
 
     return plugin
 

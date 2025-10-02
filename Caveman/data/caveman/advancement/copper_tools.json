@@ -1,0 +1,35 @@
+{
+  "parent": "caveman:mine_copper",
+  "criteria": {
+    "get_stone": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:copper_pickaxe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.story.copper_tools.description",
+      "fallback": "Mache Nutzen aus Kupferwerkzeugen"
+    },
+    "icon": {
+      "count": 1,
+      "id": "minecraft:copper_pickaxe"
+    },
+    "title": {
+      "translate": "advancements.story.copper_tools.title",
+      "fallback": "Bronzezeit"
+    }
+  },
+  "requirements": [
+    [
+      "get_stone"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

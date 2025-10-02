@@ -1,0 +1,40 @@
+{
+  "parent": "minecraft:story/iron_tools",
+  "criteria": {
+    "go_deep": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "position": {
+              "y": {
+                "min": -10,
+                "max": 10
+              }
+            }
+          } 
+        }
+      }
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.story.depth.description",
+      "fallback": "Begib dich mehr als 70 Meter unter Tage"
+    },
+    "icon": {
+      "count": 1,
+      "id": "minecraft:deepslate"
+    },
+    "title": {
+      "translate": "advancements.story.depth.title",
+      "fallback": "Höhen und Tiefen"
+    }
+  },
+  "requirements": [
+    [
+      "go_deep"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

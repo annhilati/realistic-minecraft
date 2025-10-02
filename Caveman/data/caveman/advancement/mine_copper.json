@@ -1,0 +1,35 @@
+{
+  "parent": "caveman:mine_stone",
+  "criteria": {
+    "get_stone": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:raw_copper"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.story.mine_copper.description",
+      "fallback": "Bekomme Kupfer in die Finger"
+    },
+    "icon": {
+      "count": 2,
+      "id": "minecraft:raw_copper"
+    },
+    "title": {
+      "translate": "advancements.story.mine_copper.title",
+      "fallback": "Neue Möglichkeiten"
+    }
+  },
+  "requirements": [
+    [
+      "get_stone"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
