@@ -6,6 +6,7 @@ resource_pack:
   load:
     - GAM
     - More Copper Uses
+    - Winter Leafs
 output: .
 require:
   - beet.contrib.optifine
