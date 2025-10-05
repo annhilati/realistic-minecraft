@@ -9,10 +9,11 @@ resource_pack:
     - Winter Leafs
 output: .
 require:
-  - beet.contrib.optifine
+  # - beet.contrib.optifine
+  - plugins.optifine_extended
 pipeline:
   - plugins.caveman
-  - plugins.ctm_slicer
+  - plugins.auto_ctm_slicer
 meta:
   caveman:
     pickaxe_atlas: Caveman/pickaxes.yml
