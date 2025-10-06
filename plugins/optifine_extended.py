@@ -3,23 +3,20 @@
 # What should be thought of:
 # In beet, files are abstract. There is only one Texture class for all kinds of texture. What classes should be defined for OptiFine?
 
-__all__ = ["ConnectedTexture"]
-
+import javaproperties
+from dataclasses import dataclass
+from PIL.Image import Image
 from typing import ClassVar
 from beet import Context, NamespaceFileScope, PngFile, TextFile
 from beet.core.file import ValueType, DataModelBase, FileDeserialize
 from beet.core.utils import JsonDict
-from PIL.Image import Image
-import javaproperties
-from dataclasses import dataclass
 
-# This class definition integrates what is a FileBase and a File class in beet in one definition.
-# It should be moved to beet.core.file eventually, with PropertiesFileBase and ProprtiesFile being separate classes.
-@dataclass(eq=False, repr=False)
-class PropertiesFile(DataModelBase[JsonDict]):
-    """Class representing a java properties file."""
+# ╭────────────────────────────────────────────────────────────────────────────────╮
+# │                                beet.core.file                                  │ 
+# ╰────────────────────────────────────────────────────────────────────────────────╯
 
-    data: ClassVar[FileDeserialize[JsonDict]] = FileDeserialize()
+class PropertiesFileBase(DataModelBase[ValueType]):
+    """Base class for yaml files."""
 
     def __post_init__(self):
         super().__post_init__()
@@ -28,16 +25,36 @@ class PropertiesFile(DataModelBase[JsonDict]):
         if not self.decoder:
             self.decoder = javaproperties.loads
 
+
+@dataclass(eq=False, repr=False)
+class PropertiesFile(PropertiesFileBase[JsonDict]):
+    """Class representing a yaml file."""
+
+    data: ClassVar[FileDeserialize[JsonDict]] = FileDeserialize()
+
     @classmethod
     def default(cls) -> JsonDict:
         return {}
+    
+# ╭────────────────────────────────────────────────────────────────────────────────╮
+# │                             beet.contrib.optifine                              │ 
+# ╰────────────────────────────────────────────────────────────────────────────────╯
 
-class OptifinePropertiesFile(PropertiesFile):
-    """Class representing an OptiFine texture properties file."""
+__all__ = ["ConnectedTexture"]
+
+class OptifineProperties(PropertiesFile):
+    """Class representing an unspecified OptiFine texture properties file."""
     scope: ClassVar[NamespaceFileScope] = ("optifine",)
     extension: ClassVar[str] = ".properties"
 
-class ConnectedTexture(PngFile):
+
+class OptifineTexture(PngFile):
+    """Class representing an unspecified OptiFine texture file."""
+    scope: ClassVar[NamespaceFileScope] = ("optifine",)
+    extension: ClassVar[str] = ".png"
+
+
+class ConnectedTexture(OptifineTexture):
     """Class representing an OptiFine connected texture."""
     scope: ClassVar[NamespaceFileScope] = ("optifine", "ctm")
     extension: ClassVar[str] = ".png"
@@ -47,11 +64,11 @@ class ConnectedTexture(PngFile):
         "Return the tiles when slicing the texture"
 
         ratios = {
-            7/3: (7, 3),
+            7/3: (7,  3),
             3.0: (12, 4),
-            4.0: (4, 1),
-            5.0: (5, 1),
-            7.0: (7, 1),
+            4.0: (4,  1),
+            5.0: (5,  1),
+            7.0: (7,  1),
         }
 
         image: Image = self.image
@@ -75,6 +92,17 @@ def beet_default(ctx: Context):
     # ctx.require(optifine)
     # ctx.assets.extend_namespace.remove(OptifineTexture)
     ctx.assets.extend_namespace += [
-        OptifinePropertiesFile,
+        OptifineProperties,
         ConnectedTexture,
     ]
+
+# CustomEntityModel
+# CustomEntityPart
+# CustomItemTexture
+# Colormap
+# ConnectedTexture
+# CustomAnimation
+# CustomGUI
+# Lightmap
+# CustomSky
+# 
