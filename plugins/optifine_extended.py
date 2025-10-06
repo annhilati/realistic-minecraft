@@ -7,7 +7,7 @@ import javaproperties
 from dataclasses import dataclass
 from PIL.Image import Image
 from typing import ClassVar
-from beet import Context, NamespaceFileScope, PngFile, TextFile
+from beet import Context, NamespaceFileScope, PngFile
 from beet.core.file import ValueType, DataModelBase, FileDeserialize
 from beet.core.utils import JsonDict
 
@@ -16,7 +16,7 @@ from beet.core.utils import JsonDict
 # ╰────────────────────────────────────────────────────────────────────────────────╯
 
 class PropertiesFileBase(DataModelBase[ValueType]):
-    """Base class for yaml files."""
+    """Base class for properties files."""
 
     def __post_init__(self):
         super().__post_init__()
@@ -28,7 +28,7 @@ class PropertiesFileBase(DataModelBase[ValueType]):
 
 @dataclass(eq=False, repr=False)
 class PropertiesFile(PropertiesFileBase[JsonDict]):
-    """Class representing a yaml file."""
+    """Class representing a properties file."""
 
     data: ClassVar[FileDeserialize[JsonDict]] = FileDeserialize()
 
