@@ -1,7 +1,7 @@
 import yaml
 from beet import Context, BlockTag, Recipe, LootTable, Plugin, ItemModifier, Advancement, Function, FunctionTag
 from beet.core.utils import JsonDict
-from beetsmith import Item, ItemComponents
+from beetsmith import CustomItem, ItemComponents
 import json
 from pathlib import Path
 from typing import cast
@@ -33,13 +33,13 @@ def implement_pickaxes(pickaxe_atlas: Path, default_loot_tables: Path) -> Plugin
         # │                            Component Configuration                             │ 
         # ╰────────────────────────────────────────────────────────────────────────────────╯
 
-        instances: dict[str, Item] = {}
+        instances: dict[str, CustomItem] = {}
 
         for pickaxe_key, specs in data.items():
             default_speed = specs["speed"]
             tier = specs["tier"]
 
-            instance = Item(
+            instance = CustomItem(
                 id = pickaxe_key,
                 name = {"translate": f"item.{pickaxe_key.replace(":", ".")}"},
                 model = pickaxe_key
@@ -99,7 +99,8 @@ def implement_pickaxes(pickaxe_atlas: Path, default_loot_tables: Path) -> Plugin
                 {
                     "function": "minecraft:set_components",
                     "components": {
-                        "minecraft:tool": instance.components.asDict()["minecraft:tool"]
+                        "minecraft:tool": instance.components.asDict()["minecraft:tool"],
+                        "minecraft:custom_data": instance.components.asDict()["minecraft:custom_data"]
                     }
                 }
             )
