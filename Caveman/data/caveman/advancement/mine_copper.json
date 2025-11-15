@@ -1,5 +1,5 @@
 {
-  "parent": "caveman:mine_stone",
+  "parent": "caveman:stone_tools",
   "criteria": {
     "get_stone": {
       "conditions": {

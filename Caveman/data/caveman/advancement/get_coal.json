@@ -1,0 +1,35 @@
+{
+    "parent": "caveman:copper_tools",
+    "criteria": {
+        "get_stone": {
+            "conditions": {
+                "items": [
+                    {
+                        "items": "minecraft:coal"
+                    }
+                ]
+            },
+            "trigger": "minecraft:inventory_changed"
+        }
+    },
+    "display": {
+        "description": {
+            "translate": "none",
+            "fallback": "Eine erstaulich praktische Sache"
+        },
+        "icon": {
+            "count": 1,
+            "id": "minecraft:coal"
+        },
+        "title": {
+            "translate": "none",
+            "fallback": "Brennende Steine?"
+        }
+    },
+    "requirements": [
+        [
+            "get_stone"
+        ]
+    ],
+    "sends_telemetry_event": true
+}

@@ -4,3 +4,4 @@ __pycache__/
 *resource_pack
 *.zip
 /1.21.9 loot_table
+/.venv

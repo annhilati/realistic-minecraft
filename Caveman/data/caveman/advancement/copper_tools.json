@@ -23,7 +23,7 @@
     },
     "title": {
       "translate": "advancements.story.copper_tools.title",
-      "fallback": "Bronzezeit"
+      "fallback": "Kupferzeit"
     }
   },
   "requirements": [

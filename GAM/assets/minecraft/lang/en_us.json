@@ -17,8 +17,8 @@
   "block.minecraft.gold_ore": "Calaverite Ore",
   "block.minecraft.deepslate_gold_ore": "Deepslate Calaverite Ore",
 
-  "block.minecraft.lapis_ore": "Lapis Lazuli",
-  "block.minecraft.deepslate_lapis_ore": "Deepslate Lazurite Ore",
+  "block.minecraft.lapis_ore": "Lazurite Ore",
+  "block.minecraft.deepslate_lapis_ore": "Lapis Lazuli",
   "block.minecraft.lapis_block": "Block of Lazurite",
   "container.enchant.lapis.many": "%s Lazurite",
   "container.enchant.lapis.one": "1 Lazurite",

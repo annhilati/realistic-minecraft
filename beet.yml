@@ -8,9 +8,9 @@ resource_pack:
     - More Copper Uses
     # - Winter Leafs
 output: .
-# require:
+require:
   # - beet.contrib.optifine
-  # - plugins.optifine_extended
+  - plugins.optifine_extended
 pipeline:
   - plugins.caveman
   - plugins.auto_ctm_slicer

@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": "#minecraft:stone_tool_materials"
+            "items": "minecraft:stone_pickaxe"
           }
         ]
       },
@@ -15,11 +15,10 @@
   "display": {
     "description": {
       "translate": "none",
-      "fallback": "Finde Steine mit denen man was bauen kann"
+      "fallback": "Finde Steine und baue ein etwas robusteres Werkzeug"
     },
     "icon": {
-      "count": 2,
-      "id": "minecraft:cobblestone"
+      "id": "minecraft:stone_pickaxe"
     },
     "title": {
       "translate": "advancements.story.mine_stone.title"
