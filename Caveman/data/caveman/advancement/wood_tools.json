@@ -15,7 +15,7 @@
   "display": {
     "description": {
       "translate": "advancements.story.wood_tools.description",
-      "fallback": "Stelle ein primitives Werkzeug her und stelle fest, dass es nutzlos ist"
+      "fallback": "Stelle ein primitives Werkzeug her und stelle fest, dass es (fast) nutzlos ist"
     },
     "icon": {
       "count": 1,

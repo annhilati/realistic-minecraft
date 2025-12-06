@@ -15,10 +15,9 @@
   "display": {
     "description": {
       "translate": "advancements.story.mine_iron.description",
-      "fallback": ""
+      "fallback": "Eiserne Mine"
     },
     "icon": {
-      "count": 2,
       "id": "minecraft:raw_iron"
     },
     "title": {

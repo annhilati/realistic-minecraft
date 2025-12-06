@@ -14,7 +14,7 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.story.copper_tools.description",
+      "translate": "none",
       "fallback": "Mache Nutzen aus Kupferwerkzeugen"
     },
     "icon": {
@@ -22,7 +22,7 @@
       "id": "minecraft:copper_pickaxe"
     },
     "title": {
-      "translate": "advancements.story.copper_tools.title",
+      "translate": "none",
       "fallback": "Kupferzeit"
     }
   },

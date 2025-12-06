@@ -51,7 +51,6 @@ copper:
 iron:
     4:
         - "minecraft:lapis_ore": 3
-        - "minecraft:deepslate_lapis_ore": 4.5
         - "minecraft:lapis_block": 5
         - "minecraft:calcite": 0.75
     5:
@@ -59,10 +58,8 @@ iron:
         - "#materials:group/prismarine_blocks": 1.5
         - "#materials:group/basalt_blocks": 1.25
         - "minecraft:redstone_ore": 3
-        - "minecraft:deepslate_redstone_ore": 4.5
         - "minecraft:redstone_block": 5
         - "minecraft:emerald_ore": 3
-        - "minecraft:deepslate_emerald_ore": 4.5
         
     6:
         - "minecraft:diamond_ore": 3
@@ -79,6 +76,7 @@ diamond:
         - "minecraft:deepslate_diamond_ore": 4.5
         - "minecraft:deepslate_redstone_ore": 4.5
         - "minecraft:deepslate_emerald_ore": 4.5
+        - "minecraft:deepslate_lapis_ore": 4.5
         - "#materials:group/deepslate_products": 3.5
         - "minecraft:nether_quartz_ore": 3
         - "#materials:group/quartz_blocks/0_8": 0.8
