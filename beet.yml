@@ -19,4 +19,4 @@ meta:
   caveman:
     pickaxe_atlas: Caveman/pickaxes.yml
     block_atlas: Caveman/atlas.yml
-    default_loot_tables: 1.21.9 loot_table
+    default_loot_tables: default_loot_table
