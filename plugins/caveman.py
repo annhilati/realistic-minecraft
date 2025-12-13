@@ -113,6 +113,14 @@ def implement_pickaxes(pickaxe_atlas: Path, default_loot_tables: Path) -> Plugin
             }))
 
         # ╭────────────────────────────────────────────────────────────────────────────────╮
+        # │                          Netherite Pickaxe Recipe Fix                          │ 
+        # ╰────────────────────────────────────────────────────────────────────────────────╯
+
+        dp.functions.setdefault("caveman:pickaxes").append(Function([
+                f"execute as @a if items entity @s weapon.mainhand minecraft:netherite_pickaxe[minecraft:tool={instances["minecraft:diamond_pickaxe"].components.asDict()["minecraft:tool"]}] run item modify entity @s weapon.mainhand minecraft:netherite_pickaxe",
+            ]))
+
+        # ╭────────────────────────────────────────────────────────────────────────────────╮
         # │                    Loot Table Reparsing and Implementation                     │ 
         # ╰────────────────────────────────────────────────────────────────────────────────╯
 
