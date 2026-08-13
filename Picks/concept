@@ -1,0 +1,59 @@
+from typing import Callable
+import math
+
+if __name__ == "__main__":
+    raise Exception()
+
+toolSpeed: float = ... # determined by the tool item component or 1; Either the default_mining_speed value or the speed value of the applied rule set
+toolCorrect_for_drops: bool = ... # determined by the tool item component or False; The correct_for_drops value of the applied rule set
+
+attribute: Callable[[str], float] = lambda x: ...
+
+haste: bool = ...
+hasteLevel: int = ...
+conduitPower: bool = ...
+conduitPowerLevel: int = ...
+miningFatigue: bool = ...
+miningFatigueLevel: int = ...
+
+inWater: bool = ...
+onGround: bool = ...
+
+blockHardness: float = ...
+
+
+
+speedMultiplier = toolSpeed
+
+if (speedMultiplier > 1):
+    speedMultiplier += attribute("mining_efficiency") # typically efficiencyLevel ** 2 + 1
+
+if (haste or conduitPower):
+    speedMultiplier *= 0.2 * max(hasteLevel, conduitPowerLevel) + 1
+
+if (miningFatigue):
+    # In Java Edition, Mining Fatigue actually follows hardcoded values for levels I, II, III, and IV. They are 0.3, 0.09, 0.0027, and 0.00081 respectively.[1]
+    speedMultiplier *= 0.3 ** min(miningFatigueLevel, 4)
+
+speedMultiplier *= attribute("block_break_speed")
+
+if (inWater):
+    speedMultiplier *= attribute("submerged_mining_speed") # typically 0.2, or 1 with aqua affinity
+
+if (not onGround):
+    speedMultiplier /= 5
+
+damage = speedMultiplier / blockHardness
+
+if (toolCorrect_for_drops):
+    damage /= 30
+else:
+    damage /= 100
+
+# Instant breaking
+if (damage >= 1):
+    DURATION = 0
+
+ticks = math.ceil(1 / damage)
+
+DURATION = ticks / 20

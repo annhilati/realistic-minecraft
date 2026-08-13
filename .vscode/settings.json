@@ -8,13 +8,17 @@
         "__pycache__": true,
         ".beet_cache": true,
         ".vscode": true,
-        "plugins/__pycache__": true
+        "plugins/__pycache__": true,
+        "lib/__pycache__": true,
+        "Picks/__pycache__": true
     },
     "hide-files.files": [
         "__pycache__",
         ".beet_cache",
         ".vscode",
-        "plugins/__pycache__"
+        "plugins/__pycache__",
+        "lib/__pycache__",
+        "Picks/__pycache__"
     ],
     "python-envs.defaultEnvManager": "ms-python.python:system",
     "python-envs.pythonProjects": []
